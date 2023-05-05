@@ -1,0 +1,14 @@
+.container {
+  padding: 3.8rem 5.2rem;
+}
+
+.h1 {
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rem;
+}

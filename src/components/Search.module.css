@@ -1,0 +1,79 @@
+.label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.priceLabel {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.input {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1rem;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 0;
+  width: 37.4rem;
+}
+
+.priceInput {
+  width: 15.5rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  width: 12rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  background-color: #833ae0;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  margin-left: 3rem;
+}
+
+button:hover {
+  background-color: #a35ff0;
+}
+
+.button:active {
+  background-color: #5d1c9e;
+}
+
+.p {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-decoration: underline;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.select {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1rem;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 0;
+  width: 39.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.right {
+  padding-top: 2rem;
+  padding-left: 3rem;
+}
