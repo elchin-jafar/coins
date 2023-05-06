@@ -68,8 +68,8 @@ const ListofCoins = () => {
       <Search isOpen={(prop) => setIsOpen(prop)} />
       {isOpen && (
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {data.map((coin) => (
-            <CoinShowCase title={coin.name} info={coin.shortInfo} />
+          {data.map((coin, index) => (
+            <CoinShowCase title={coin.name} info={coin.shortInfo} key={index} />
           ))}
         </div>
       )}
