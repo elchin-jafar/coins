@@ -2,6 +2,7 @@ import classes from "./CoinDetailsPage.module.css";
 import BullionCoinImg from "../assets/BullionCoin.png";
 import ExclusiveCoinImg from "../assets/ExclusiveCoin.png";
 import { useNavigate } from "react-router-dom";
+import CustomizedTables from "../UI/Table";
 
 const CoinDetailsPage = () => {
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ const CoinDetailsPage = () => {
           inscription "5 cents" between two maple leaves. At the bottom in two
           lines is the inscription CANADA (CANADA) and the year of minting.
         </p>
+        <CustomizedTables />
         <a onClick={() => navigate(-1)} className={classes.navigation}>
           Back to the list
         </a>
