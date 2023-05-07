@@ -26,21 +26,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(name, calories) {
-  return { name, calories };
-}
-
-const rows = [
-  createData("Issuing Country", "CANADA"),
-  createData("Composition", "NICKEL"),
-  createData("Quality", "BU"),
-  createData("Denomination", "5 cents"),
-  createData("Year", 1965),
-  createData("Weight", "4.54 g"),
-  createData("Price", "40$"),
-];
-
-export default function CustomizedTables() {
+export default function CustomizedTables({ rows }) {
   return (
     <TableContainer component={Paper} sx={{ margin: "4rem 0" }}>
       <Table sx={{ minWidth: 100 }} aria-label="customized table">
@@ -50,7 +36,7 @@ export default function CustomizedTables() {
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>
-              <StyledTableCell align="left">{row.calories}</StyledTableCell>
+              <StyledTableCell align="left">{row.value}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
