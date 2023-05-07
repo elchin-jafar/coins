@@ -4,13 +4,15 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
+    borderRight: `2px solid ${theme.palette.action.hover}`,
+    maxWidth: "1px",
+    padding: "6px",
   },
 }));
 
@@ -20,7 +22,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
   // hide last border
   "&:last-child td, &:last-child th": {
-    border: 0,
+    // border: 0,
   },
 }));
 
@@ -29,18 +31,18 @@ function createData(name, calories) {
 }
 
 const rows = [
-  createData("Issuing Country", 159),
-  createData("Composition", 237),
-  createData("Quality", 262),
-  createData("Denomination", 305),
-  createData("Year", 356),
-  createData("Weight", 30),
-  createData("Price", 50),
+  createData("Issuing Country", "CANADA"),
+  createData("Composition", "NICKEL"),
+  createData("Quality", "BU"),
+  createData("Denomination", "5 cents"),
+  createData("Year", 1965),
+  createData("Weight", "4.54 g"),
+  createData("Price", "40$"),
 ];
 
 export default function CustomizedTables() {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ margin: "4rem 0" }}>
       <Table sx={{ minWidth: 100 }} aria-label="customized table">
         <TableBody>
           {rows.map((row) => (

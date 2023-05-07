@@ -6,7 +6,7 @@ import BullionCoin from "../assets/BullionCoin.png";
 import data from "../data/coinData";
 import { useState } from "react";
 
-const CoinShowCase = ({ title, info }) => {
+const CoinShowCase = ({ title, info, id }) => {
   return (
     <div
       style={{ display: "flex", marginBottom: "2.5rem", marginRight: "15rem" }}
@@ -19,7 +19,7 @@ const CoinShowCase = ({ title, info }) => {
       />
       <div className="right">
         <Link
-          to="/coin-details"
+          to={`/coin-details/${id}`}
           className="title"
           style={{
             fontSize: "1.6rem",
@@ -68,8 +68,13 @@ const ListofCoins = () => {
       <Search isOpen={(prop) => setIsOpen(prop)} />
       {isOpen && (
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {data.map((coin, index) => (
-            <CoinShowCase title={coin.name} info={coin.shortInfo} key={index} />
+          {data.map((coin) => (
+            <CoinShowCase
+              title={coin.name}
+              info={coin.shortInfo}
+              key={coin.id}
+              id={coin.id}
+            />
           ))}
         </div>
       )}

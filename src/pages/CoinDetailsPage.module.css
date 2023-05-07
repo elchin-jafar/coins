@@ -32,6 +32,7 @@
 }
 
 .navigation {
+    max-width: fit-content;
     text-decoration: underline;
     cursor: pointer;
 }

@@ -14,7 +14,7 @@ function App() {
       element: <ListofCoins />,
     },
     {
-      path: "/coin-details",
+      path: "/coin-details/:id",
       element: <CoinDetailsPage />,
     },
   ]);
