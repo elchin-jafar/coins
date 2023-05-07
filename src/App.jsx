@@ -10,7 +10,7 @@ function App() {
       element: <Homepage />,
     },
     {
-      path: "/coins",
+      path: "/coins/:filter",
       element: <ListofCoins />,
     },
     {

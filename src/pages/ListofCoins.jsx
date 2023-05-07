@@ -1,10 +1,10 @@
 import classes from "./ListofCoins.module.css";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Search from "../components/Search";
 import BullionCoin from "../assets/BullionCoin.png";
 import data from "../data/coinData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const CoinShowCase = ({ title, info, id }) => {
   return (
@@ -49,6 +49,19 @@ const CoinShowCase = ({ title, info, id }) => {
 
 const ListofCoins = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const [filteredData, setFilteredData] = useState([]);
+  const { filter } = useParams();
+  useEffect(() => {
+    if (filter === "bullion")
+      setFilteredData(data.filter((coin) => coin.class === "Bullion coins"));
+    if (filter === "exclusive")
+      setFilteredData(data.filter((coin) => coin.class === "Exclusive coins"));
+    if (filter === "commemorative")
+      setFilteredData(
+        data.filter((coin) => coin.class === "Commemorative coins")
+      );
+  }, []);
+
   return (
     <section className={classes.container}>
       <div className={classes.h1}>List of the Coins</div>
@@ -68,7 +81,7 @@ const ListofCoins = () => {
       <Search isOpen={(prop) => setIsOpen(prop)} />
       {isOpen && (
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {data.map((coin) => (
+          {filteredData?.map((coin) => (
             <CoinShowCase
               title={coin.name}
               info={coin.shortInfo}

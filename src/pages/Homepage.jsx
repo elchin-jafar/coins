@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const CoinShowCase = (props) => {
-  const { title, image } = props;
+  const { title, image, filter } = props;
   return (
     <div
       style={{
@@ -22,7 +22,7 @@ const CoinShowCase = (props) => {
       </div>
       <Link
         style={{ fontSize: "1.4rem", fontWeight: 300, textDecoration: "none" }}
-        to="/coins"
+        to={`/coins/${filter}`}
       >
         Show all &gt;
       </Link>
@@ -39,9 +39,21 @@ const Homepage = () => {
       <Search isOpen={(prop) => setSearchOpen(prop)} />
       {searchOpen && (
         <div className={classes.flex}>
-          <CoinShowCase title="Bullion coins" image={BullionCoin} />
-          <CoinShowCase title="Exclusive coins" image={ExclusiveCoin} />
-          <CoinShowCase title="Commemorative coins" image={CommemorativeCoin} />
+          <CoinShowCase
+            title="Bullion coins"
+            image={BullionCoin}
+            filter="bullion"
+          />
+          <CoinShowCase
+            title="Exclusive coins"
+            image={ExclusiveCoin}
+            filter="exclusive"
+          />
+          <CoinShowCase
+            title="Commemorative coins"
+            image={CommemorativeCoin}
+            filter="commemorative"
+          />
         </div>
       )}
     </section>
