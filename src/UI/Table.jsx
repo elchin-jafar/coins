@@ -28,7 +28,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function CustomizedTables({ rows }) {
   return (
-    <TableContainer component={Paper} sx={{ margin: "4rem 0" }}>
+    <TableContainer component={Paper} sx={{ margin: "4rem 0" }} elevation={0}>
       <Table sx={{ minWidth: 100 }} aria-label="customized table">
         <TableBody>
           {rows.map((row) => (
