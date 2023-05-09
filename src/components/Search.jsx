@@ -5,20 +5,33 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { TextField } from "@mui/material";
 import Select from "../UI/Select";
 
-const Search = ({ isOpen }) => {
+const Search = ({ isOpen, searchQuery }) => {
   const [searchOpen, setSearchOpen] = useState(false);
+  // const [searchQuery, setSearchQuery] = useState("");
 
   const handleExpandSearch = () => {
     setSearchOpen((prevState) => !prevState);
     isOpen(searchOpen);
   };
+
+  const handleSearchQuery = (e) => {
+    // setSearchQuery(e.target.value);
+    searchQuery(e.target.value);
+  };
+
   return (
     <>
       <label htmlFor="searchInput" className={classes.label}>
         Input field
       </label>
       <div className={classes.flex}>
-        <input type="text" id="searchInput" className={classes.input} />
+        <input
+          type="text"
+          id="searchInput"
+          className={classes.input}
+          // value={searchQuery}
+          onChange={handleSearchQuery}
+        />
         <button className={classes.button}>Search</button>
       </div>
       <p className={classes.p} onClick={handleExpandSearch}>
@@ -65,8 +78,8 @@ const Search = ({ isOpen }) => {
                 "Portugal",
               ]}
             />
-            <Select label="Metal" />
-            <Select label="Quality of the coin" />
+            <Select label="Metal" options={["nickel", "gold", "steel"]} />
+            <Select label="Quality of the coin" options={["BU"]} />
           </div>
           <div className={classes.right}>
             <label htmlFor="" className={classes.label}>
@@ -107,10 +120,10 @@ const Search = ({ isOpen }) => {
               className={`${classes.input} ${classes.priceInput}`}
             />
           </div>
+
+          {handleSearchQuery && <div>{searchQuery}</div>}
         </div>
       )}
-
-      {/* <TextField /> */}
     </>
   );
 };

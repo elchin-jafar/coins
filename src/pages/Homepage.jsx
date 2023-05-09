@@ -4,7 +4,7 @@ import BullionCoin from "../assets/BullionCoin.png";
 import ExclusiveCoin from "../assets/ExclusiveCoin.png";
 import CommemorativeCoin from "../assets/CommemorativeCoin.png";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useAsyncError } from "react-router-dom";
 
 const CoinShowCase = (props) => {
   const { title, image, filter } = props;
@@ -33,11 +33,18 @@ const CoinShowCase = (props) => {
 
 const Homepage = () => {
   const [searchOpen, setSearchOpen] = useState(true);
+  const [isSearchEntered, setIsSearchEntered] = useState("");
+  const handleSearchQuery = (query) => setIsSearchEntered(query);
+
+  console.log("isSearchEntered", isSearchEntered);
   return (
     <section className={classes.container}>
       <div className={classes.h1}>Homepage</div>
-      <Search isOpen={(prop) => setSearchOpen(prop)} />
-      {searchOpen && (
+      <Search
+        isOpen={(prop) => setSearchOpen(prop)}
+        searchQuery={handleSearchQuery}
+      />
+      {!isSearchEntered && searchOpen && (
         <div className={classes.flex}>
           <CoinShowCase
             title="Bullion coins"
@@ -55,6 +62,9 @@ const Homepage = () => {
             filter="commemorative"
           />
         </div>
+      )}
+      {isSearchEntered && (
+        <div style={{ border: "1px solid red" }}>{isSearchEntered}</div>
       )}
     </section>
   );
