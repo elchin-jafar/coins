@@ -2,7 +2,6 @@ import classes from "./ListofCoins.module.css";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { Link, useParams } from "react-router-dom";
 import Search from "../components/Search";
-import BullionCoin from "../assets/BullionCoin.png";
 import data from "../data/coinData";
 import { useState, useEffect } from "react";
 
@@ -50,6 +49,8 @@ export const CoinShowCase = ({ title, image, info, id }) => {
 const ListofCoins = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [filteredData, setFilteredData] = useState([]);
+  const [isSearchEntered, setIsSearchEntered] = useState("");
+  const [filteredBySearch, setFilteredBySearch] = useState([]);
   const { filter } = useParams();
   useEffect(() => {
     if (filter === "bullion")
@@ -61,6 +62,16 @@ const ListofCoins = () => {
         data.filter((coin) => coin.class === "Commemorative coins")
       );
   }, []);
+
+  const handleSearchQuery = (query) => {
+    setIsSearchEntered(query);
+    const filtered = filteredData.filter((coin) =>
+      coin.name.trim().toLowerCase().includes(query.trim().toLowerCase())
+    );
+    setFilteredBySearch(filtered);
+  };
+
+  console.log("filteredBySearch list page", filteredBySearch);
 
   return (
     <section className={classes.container}>
@@ -78,8 +89,11 @@ const ListofCoins = () => {
           List of the Coins
         </p>
       </Breadcrumbs>
-      <Search isOpen={(prop) => setIsOpen(prop)} />
-      {isOpen && (
+      <Search
+        isOpen={(prop) => setIsOpen(prop)}
+        searchQuery={handleSearchQuery}
+      />
+      {!isSearchEntered && isOpen && (
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {filteredData?.map((coin) => (
             <CoinShowCase
@@ -90,6 +104,33 @@ const ListofCoins = () => {
               id={coin?.id}
             />
           ))}
+        </div>
+      )}
+      {isSearchEntered && (
+        <div>
+          {filteredBySearch.length !== 0 ? (
+            filteredBySearch.map((coin) => (
+              <CoinShowCase
+                title={coin.name}
+                image={coin.image1}
+                info={coin.shortInfo}
+                key={coin.id}
+                id={coin.id}
+              />
+            ))
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                fontSize: "2rem",
+                opacity: "0.6",
+                fontStyle: "italic",
+              }}
+            >
+              no coins found
+            </div>
+          )}
         </div>
       )}
     </section>

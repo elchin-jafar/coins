@@ -2,21 +2,64 @@ import { useState } from "react";
 import classes from "./Search.module.css";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import { TextField } from "@mui/material";
 import Select from "../UI/Select";
+import data from "../data/coinData";
+import { CoinShowCase } from "../pages/ListofCoins";
 
 const Search = ({ isOpen, searchQuery }) => {
   const [searchOpen, setSearchOpen] = useState(false);
-  // const [searchQuery, setSearchQuery] = useState("");
+  const [isBtnClicked, setIsBtnClicked] = useState(false);
+  const [filteredData, setFilteredData] = useState([]);
+  const [countryValue, setCountryValue] = useState("");
+  const [metalValue, setMetalValue] = useState("");
+
+  console.log("filteredData from search", filteredData);
 
   const handleExpandSearch = () => {
+    if (isBtnClicked && searchOpen) setIsBtnClicked(false);
     setSearchOpen((prevState) => !prevState);
     isOpen(searchOpen);
   };
 
   const handleSearchQuery = (e) => {
-    // setSearchQuery(e.target.value);
     searchQuery(e.target.value);
+  };
+
+  const handleCountryValue = (e) => {
+    const value = e.target.value.toLowerCase();
+    setCountryValue(value);
+  };
+
+  const handleMetalValue = (e) => {
+    const value = e.target.value.toLowerCase();
+    setMetalValue(value);
+  };
+
+  const handleSearch = () => {
+    setIsBtnClicked(true);
+    if (countryValue) {
+      const filtered = data.filter(
+        (coin) => coin.issuingCountry.toLowerCase() === countryValue
+      );
+      setFilteredData(filtered);
+    }
+
+    if (metalValue) {
+      const filtered = data.filter(
+        (coin) => coin.composition.toLowerCase() === metalValue
+      );
+      setFilteredData(filtered);
+    }
+
+    if (countryValue && metalValue) {
+      const countryFilter = data.filter(
+        (coin) => coin.issuingCountry.toLowerCase() === countryValue
+      );
+      const result = countryFilter.filter(
+        (coin) => coin.composition.toLowerCase() === metalValue
+      );
+      setFilteredData(result);
+    }
   };
 
   return (
@@ -29,10 +72,11 @@ const Search = ({ isOpen, searchQuery }) => {
           type="text"
           id="searchInput"
           className={classes.input}
-          // value={searchQuery}
           onChange={handleSearchQuery}
         />
-        <button className={classes.button}>Search</button>
+        <button className={classes.button} onClick={handleSearch}>
+          Search
+        </button>
       </div>
       <p className={classes.p} onClick={handleExpandSearch}>
         Advanced filter{" "}
@@ -55,6 +99,7 @@ const Search = ({ isOpen, searchQuery }) => {
             <Select
               label="Issuing country"
               options={[
+                "enter country",
                 "Canada",
                 "UNITED STATES OF AMERICA",
                 "the Republic of Vietnam",
@@ -77,9 +122,17 @@ const Search = ({ isOpen, searchQuery }) => {
                 "Costa Rica",
                 "Portugal",
               ]}
+              onChange={handleCountryValue}
             />
-            <Select label="Metal" options={["nickel", "gold", "steel"]} />
-            <Select label="Quality of the coin" options={["BU"]} />
+            <Select
+              label="Metal"
+              options={["enter metal", "nickel", "gold", "steel"]}
+              onChange={handleMetalValue}
+            />
+            <Select
+              label="Quality of the coin"
+              options={["enter quality", "BU"]}
+            />
           </div>
           <div className={classes.right}>
             <label htmlFor="" className={classes.label}>
@@ -120,8 +173,33 @@ const Search = ({ isOpen, searchQuery }) => {
               className={`${classes.input} ${classes.priceInput}`}
             />
           </div>
+        </div>
+      )}
 
-          {handleSearchQuery && <div>{searchQuery}</div>}
+      {isBtnClicked && (
+        <div style={{ marginTop: "3rem" }}>
+          {filteredData.length !== 0 ? (
+            filteredData.map((coin) => (
+              <CoinShowCase
+                key={coin.id}
+                title={coin.name}
+                image={coin.image1}
+                info={coin.shortInfo}
+                id={coin.id}
+              />
+            ))
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                fontSize: "2rem",
+                opacity: "0.6",
+                fontStyle: "italic",
+              }}
+            >
+              not found
+            </div>
+          )}
         </div>
       )}
     </>

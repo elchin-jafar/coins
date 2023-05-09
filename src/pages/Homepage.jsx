@@ -80,6 +80,7 @@ const Homepage = () => {
                 title={coin.name}
                 image={coin.image1}
                 info={coin.shortInfo}
+                key={coin.id}
                 id={coin.id}
               />
             ))
