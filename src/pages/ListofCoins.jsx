@@ -6,13 +6,13 @@ import BullionCoin from "../assets/BullionCoin.png";
 import data from "../data/coinData";
 import { useState, useEffect } from "react";
 
-const CoinShowCase = ({ title, info, id }) => {
+const CoinShowCase = ({ title, image, info, id }) => {
   return (
     <div
       style={{ display: "flex", marginBottom: "2.5rem", marginRight: "15rem" }}
     >
       <img
-        src={BullionCoin}
+        src={image}
         alt={title}
         width={120}
         style={{ marginRight: "3rem" }}
@@ -83,10 +83,11 @@ const ListofCoins = () => {
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {filteredData?.map((coin) => (
             <CoinShowCase
-              title={coin.name}
-              info={coin.shortInfo}
-              key={coin.id}
-              id={coin.id}
+              title={coin?.name}
+              image={coin?.image1}
+              info={coin?.shortInfo}
+              key={coin?.id}
+              id={coin?.id}
             />
           ))}
         </div>

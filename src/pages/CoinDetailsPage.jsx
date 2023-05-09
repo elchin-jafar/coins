@@ -24,12 +24,12 @@ const CoinDetailsPage = () => {
       <section className={classes.section}>
         <div className={classes.left}>
           <img
-            src={BullionCoinImg}
+            src={currentData?.image1}
             alt="BullionCoinImg"
             width={300}
             style={{ marginBottom: "2.4rem" }}
           />
-          <img src={ExclusiveCoinImg} alt="ExclusiveCoinImg" width={300} />
+          <img src={currentData?.image2} alt="ExclusiveCoinImg" width={300} />
         </div>
         <div className={classes.right}>
           <h1 className={classes.h1}>{currentData.name}</h1>

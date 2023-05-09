@@ -1,3 +1,64 @@
+import canadianB1 from "../assets/detailsOfCoins/CanadianBeaver_1.png";
+import canadianB2 from "../assets/detailsOfCoins/CanadianBeaver_2.png";
+import looney1 from "../assets/detailsOfCoins/Looney_1.png";
+import looney2 from "../assets/detailsOfCoins/Looney_2.png";
+import jefferson1 from "../assets/detailsOfCoins/Jefferson_1.png";
+import jefferson2 from "../assets/detailsOfCoins/Jefferson_2.png";
+import kennedy1 from "../assets/detailsOfCoins/Kennedy_1.png";
+import kennedy2 from "../assets/detailsOfCoins/Kennedy_2.png";
+import canadianCent1 from "../assets/detailsOfCoins/CanadianCent_1.png";
+import canadianCent2 from "../assets/detailsOfCoins/CanadianCent_2.png";
+import penny1 from "../assets/detailsOfCoins/A_penny_1.png";
+import penny2 from "../assets/detailsOfCoins/A_penny_2.png";
+import cents25_1 from "../assets/detailsOfCoins/25cents_1.png";
+import cents25_2 from "../assets/detailsOfCoins/25cents_2.png";
+import dimSum1 from "../assets/detailsOfCoins/DimSum_1.png";
+import dimSum2 from "../assets/detailsOfCoins/DimSum_2.png";
+import southVietnam1 from "../assets/detailsOfCoins/SouthVietnameseDong_1.png";
+import southVietnam2 from "../assets/detailsOfCoins/SouthVietnameseDong_2.png";
+import britishAnt1 from "../assets/detailsOfCoins/TheBritishAntelope_1.png";
+import britishAnt2 from "../assets/detailsOfCoins/TheBritishAntelope_2.png";
+import cron1 from "../assets/detailsOfCoins/Cron_1.png";
+import cron2 from "../assets/detailsOfCoins/Cron_2.png";
+import franc1 from "../assets/detailsOfCoins/Franc_1.png";
+import franc2 from "../assets/detailsOfCoins/Franc_2.png";
+import stork1 from "../assets/detailsOfCoins/Stork_1.png";
+import stork2 from "../assets/detailsOfCoins/Stork_2.png";
+import gyeonggi1 from "../assets/detailsOfCoins/Gyeonggi_1.png";
+import gyeonggi2 from "../assets/detailsOfCoins/Gyeonggi_2.png";
+import bolivianPeso1 from "../assets/detailsOfCoins/BolivianPeso_1.png";
+import bolivianPeso2 from "../assets/detailsOfCoins/BolivianPeso_2.png";
+import botswana1 from "../assets/detailsOfCoins/Botswana_1.png";
+import botswana2 from "../assets/detailsOfCoins/Botswana_2.png";
+import virginia1 from "../assets/detailsOfCoins/Virginia_1.png";
+import virginia2 from "../assets/detailsOfCoins/Virginia_2.png";
+import theobromaCocoa1 from "../assets/detailsOfCoins/TheobromaCocoa_1.png";
+import theobromaCocoa2 from "../assets/detailsOfCoins/TheobromaCocoa_2.png";
+import weimar1 from "../assets/detailsOfCoins/Coin_of_the_Weimar_Republic_1.png";
+import weimar2 from "../assets/detailsOfCoins/Coin_of_the_Weimar_Republic_2.png";
+import scientist1 from "../assets/detailsOfCoins/Scientist_1.png";
+import scientist2 from "../assets/detailsOfCoins/Scientist_2.png";
+import lionSedge1 from "../assets/detailsOfCoins/LionSedge_1.png";
+import lionSedge2 from "../assets/detailsOfCoins/LionSedge_2.png";
+import rial1 from "../assets/detailsOfCoins/Rial_1.png";
+import rial2 from "../assets/detailsOfCoins/Rial_2.png";
+import isk1 from "../assets/detailsOfCoins/ISK_1.png";
+import isk2 from "../assets/detailsOfCoins/ISK_2.png";
+import yemen1 from "../assets/detailsOfCoins/Yemen_1.png";
+import yemen2 from "../assets/detailsOfCoins/Yemen_2.png";
+import woman1 from "../assets/detailsOfCoins/Woman_1.png";
+import woman2 from "../assets/detailsOfCoins/Woman_2.png";
+import alligator1 from "../assets/detailsOfCoins/Alligator_1.png";
+import alligator2 from "../assets/detailsOfCoins/Alligator_2.png";
+import panda1 from "../assets/detailsOfCoins/TheGoldenPanda_1.png";
+import panda2 from "../assets/detailsOfCoins/TheGoldenPanda_2.png";
+import costaRica1 from "../assets/detailsOfCoins/CostaRica_1.png";
+import costaRica2 from "../assets/detailsOfCoins/CostaRica_2.png";
+import yotc1 from "../assets/detailsOfCoins/Year_of_the_children_1.png";
+import yotc2 from "../assets/detailsOfCoins/Year_of_the_children_2.png";
+import sailboat1 from "../assets/detailsOfCoins/Sailboat_1.png";
+import sailboat2 from "../assets/detailsOfCoins/Sailboat_2.png";
+
 const data = [
   {
     id: 1,
@@ -13,6 +74,8 @@ const data = [
     year: "1965",
     weight: "4.54 g",
     price: "40$",
+    image1: canadianB1,
+    image2: canadianB2,
   },
   {
     id: 2,
@@ -28,6 +91,8 @@ const data = [
     year: "1970",
     weight: "5.4 g",
     price: "65$",
+    image1: looney1,
+    image2: looney2,
   },
   {
     id: 3,
@@ -43,6 +108,8 @@ const data = [
     year: "1966",
     weight: "3.54 g",
     price: "35$",
+    image1: jefferson1,
+    image2: jefferson2,
   },
   {
     id: 4,
@@ -58,6 +125,8 @@ const data = [
     year: "1963",
     weight: "4.3 g",
     price: "43$",
+    image1: kennedy1,
+    image2: kennedy2,
   },
   {
     id: 5,
@@ -73,6 +142,8 @@ const data = [
     year: "1965",
     weight: "2.7 g",
     price: "8$",
+    image1: canadianCent1,
+    image2: canadianCent2,
   },
   {
     id: 6,
@@ -88,6 +159,8 @@ const data = [
     year: "1793",
     weight: "5.1 g",
     price: "8$",
+    image1: penny1,
+    image2: penny2,
   },
   {
     id: 7,
@@ -103,6 +176,8 @@ const data = [
     year: "1966",
     weight: "5.7 g",
     price: "80$",
+    image1: cents25_1,
+    image2: cents25_2,
   },
   {
     id: 8,
@@ -118,6 +193,8 @@ const data = [
     year: "1946",
     weight: "4.25 g",
     price: "10$",
+    image1: dimSum1,
+    image2: dimSum2,
   },
   {
     id: 9,
@@ -133,6 +210,8 @@ const data = [
     year: "1955",
     weight: "5.05 g",
     price: "56$",
+    image1: southVietnam1,
+    image2: southVietnam2,
   },
   {
     id: 10,
@@ -148,6 +227,8 @@ const data = [
     year: "1952",
     weight: "6.3 g",
     price: "78$",
+    image1: britishAnt1,
+    image2: britishAnt2,
   },
   {
     id: 11,
@@ -162,13 +243,16 @@ const data = [
     year: "1934",
     weight: "5.67 g",
     price: "79$",
+    image1: cron1,
+    image2: cron2,
   },
   {
     id: 12,
     name: "Franc",
     class: "Bullion coins",
     info: "Unique coin with the image of a walking elephant. 'Frank' of the Belgian Congo. On the reverse of the coin in its central part there is an inscription in French: '2 francs' - 2 francs, framed by a five-pointed star. Along the edge from left to right there is an inscription in French and Dutch in two lines: “BANQUE DU CONGO BELGE”, “BANQUE VAN BELGISCH CONGO” - Bank of the Belgian Congo. The edge of the coin is decorated with decorative teeth. On the reverse of the coin in the central part is a walking elephant. The year of minting is located under it: 1947. The edge is uneven.",
-    shortInfo: "Unique coin with the image of a walking elephant. 'Frank' of the Belgian Congo.",
+    shortInfo:
+      "Unique coin with the image of a walking elephant. 'Frank' of the Belgian Congo.",
     issuingCountry: "the Belgian Congo",
     composition: "gold",
     quality: "BU",
@@ -176,13 +260,16 @@ const data = [
     year: "1947",
     weight: "5.45 g",
     price: "68$",
+    image1: franc1,
+    image2: franc2,
   },
   {
     id: 13,
     name: "Stork",
     class: "Bullion coins",
     info: "Unique coin with the image of a flying stork. French coin at 2 two francs 1997. Two francs by Georges Gynemer - a commemorative coin of two French francs, issued in 1997 in honor of the famous pilot of the First World War, Georges Gynemer, on the occasion of the 80th anniversary of the officer cross of the Legion of Honor and his death: shot down in flight by a German plane. They are painted by engravers of the workshop of coins and medals under the direction of the general engraver of coins Pierre Rodier 4. The obverse depicts a portrait of Georges Gainemer in a flight suit and pilot's glasses, raised to his forehead. The inscription GEORGES GUYNEMER 1894-1917 in a semicircle at the top of the coin. And also the year of release below. The reverse shows a flying stork. Also below the arc is the inscription LIBERTÉ ÉGALITÉ FRATERNITÉ, separated by dots. And the face value at the top of the coin.",
-    shortInfo: "Unique coin with the image of a flying stork. French coin at 2 two francs 1997.",
+    shortInfo:
+      "Unique coin with the image of a flying stork. French coin at 2 two francs 1997.",
     issuingCountry: "France",
     composition: "steel",
     quality: "BU",
@@ -190,13 +277,16 @@ const data = [
     year: "1997",
     weight: "6.57 g",
     price: "54$",
+    image1: stork1,
+    image2: stork2,
   },
   {
     id: 14,
     name: "Gyeonggi",
     class: "Bullion coins",
     info: "'Gyeonggi'. Coin with the image of five kangaroos - symbols of Australia. The first Australian coin with a nominal value of 1 dollar was introduced on May 13, 1984 to replace a one-dollar banknote. The portraits of Elizabeth II on the obverse of the 1984, 1985 and 1988 coins were made by Arnold Machin, and on the 1999 coins by Ian Rank-Broadley. The reverse of the coin depicts five kangaroos symbolizing Australia. The drawing was designed by Stuart Devlin in 1966. The first Australian $ 1 coin was introduced on May 13, 1984 to replace a one-dollar bill. This is currently the most common coin denomination in Australia.",
-    shortInfo: "'Gyeonggi'. Coin with the image of five kangaroos - symbols of Australia.",
+    shortInfo:
+      "'Gyeonggi'. Coin with the image of five kangaroos - symbols of Australia.",
     issuingCountry: "Australia",
     composition: "gold",
     quality: "BU",
@@ -204,6 +294,8 @@ const data = [
     year: "1984",
     weight: "4.76 g",
     price: "97$",
+    image1: gyeonggi1,
+    image2: gyeonggi2,
   },
   {
     id: 15,
@@ -218,6 +310,8 @@ const data = [
     year: "1988",
     weight: "3.62 g",
     price: "54$",
+    image1: bolivianPeso1,
+    image2: bolivianPeso2,
   },
   {
     id: 16,
@@ -232,13 +326,16 @@ const data = [
     year: "1976",
     weight: "4.28 g",
     price: "62$",
+    image1: botswana1,
+    image2: botswana2,
   },
   {
     id: 17,
     name: "Virginia",
     class: "Bullion coins",
     info: "Virginia Coin with the image of a seahorse. Coin created during the reign of Elizabeth II. The obverse depicts Her Majesty Queen Elizabeth II. At the top of the coin is the inscription British Virgin Islands Queen Elizabeth II 2014. The reverse depicts a beautiful seahorse with a tail wrapped around a coral. The choice of seahorse reflects the marine heritage of the British Virgin Islands. The British Virgin Islands, located in the Caribbean Sea and consisting of more than 60 islands, are known for their coral reefs, which are home to a wide variety of animal species, including seahorses. Seahorse is the name given to 54 species of marine fish in the genus Hippocampus, which comes from the ancient Greek hippos, which means “horse”, and Campos - “sea monster”.",
-    shortInfo: "Virginia Coin with the image of a seahorse. Coin created during the reign of Elizabeth II.",
+    shortInfo:
+      "Virginia Coin with the image of a seahorse. Coin created during the reign of Elizabeth II.",
     issuingCountry: "British Virgin Islands",
     composition: "nickel",
     quality: "BU",
@@ -246,13 +343,16 @@ const data = [
     year: "2014",
     weight: "6.98 g",
     price: "108$",
+    image1: virginia1,
+    image2: virginia2,
   },
   {
     id: 18,
     name: "Theobroma Cocoa",
     class: "Bullion coins",
     info: "Coin with a lion in the center of the shield. Ghana coin, published in 1967. The reverse depicts a runaway lion in the center of a shield divided into four parts, separating the date and the face value. The inscription at the top of the coin is TWENTY As for the images inside the coat of arms: upper left: sword (used by chieftains) and staff (used by a linguist for ceremonial events) top right: OSU castle at sea (Presidential Palace), bottom left: cocoa tree (agricultural wealth of Ghana). Bottom right: a gold mine (rich in industrial minerals and natural resources) in Ghana. The Golden Lion and George intersect in the center (a permanent connection between Ghana and the Commonwealth of Nations).",
-    shortInfo: "Coin with a lion in the center of the shield. Ghana coin, published in 1967.",
+    shortInfo:
+      "Coin with a lion in the center of the shield. Ghana coin, published in 1967.",
     issuingCountry: "Ghana",
     composition: "steel",
     quality: "BU",
@@ -260,13 +360,16 @@ const data = [
     year: "1962",
     weight: "4.76 g",
     price: "54$",
+    image1: theobromaCocoa1,
+    image2: theobromaCocoa2,
   },
   {
     id: 19,
     name: "Coin of the Weimar Republic",
     class: "Bullion coins",
     info: "The Hindenburg Coin with the coat of arms of the Weimar Republic. On the obverse, in the center of the coin, at the top is the coat of arms of the Weimar Republic. In the center below is the coat of arms of the Hindenburg family. This is a shield divided into 4 fields - in the upper left and lower right corners there is a head of a bull. On the reverse side is a portrait of Paul von Hindenburg (1847–1934), Field Marshal, President of the Weimar Republic in 1925–1934 (right). Along the edge of the coin is a semicircle of date: 1847-1927 and the inscription: * * REICHSPRASIDENT * VON * HINDENBURG •. At the bottom left of the portrait is a letter denoting a German mint.",
-    shortInfo: "The Hindenburg Coin with the coat of arms of the Weimar Republic.",
+    shortInfo:
+      "The Hindenburg Coin with the coat of arms of the Weimar Republic.",
     issuingCountry: "the Weimar Republic",
     composition: "silver",
     quality: "BU",
@@ -274,13 +377,16 @@ const data = [
     year: "1927",
     weight: "4.76 g",
     price: "142$",
+    image1: weimar1,
+    image2: weimar2,
   },
   {
     id: 20,
     name: "Scientist",
     class: "Bullion coins",
     info: "Silver Egyptian coin with the image of the god Thoth. Silver Egyptian coin. Face value one pound. It has been produced since 1981. The coin shows the name of the country and its meaning in Arabic. Also depicted is the Egyptian god Thoth. On the other side is a travel plate left by a radiant sun gear and splatter. The Egyptian pound is often shortened as LE or L. E., which means livre égyptienne (French for Egyptian pound).",
-    shortInfo: "Silver Egyptian coin with the image of the god Thoth. Silver Egyptian coin.",
+    shortInfo:
+      "Silver Egyptian coin with the image of the god Thoth. Silver Egyptian coin.",
     issuingCountry: "Egypt",
     composition: "silver",
     quality: "BU",
@@ -288,6 +394,8 @@ const data = [
     year: "1981",
     weight: "3.95 g",
     price: "112$",
+    image1: scientist1,
+    image2: scientist2,
   },
   {
     id: 21,
@@ -303,9 +411,11 @@ const data = [
     year: "1975",
     weight: "4.95 g",
     price: "76$",
+    image1: lionSedge1,
+    image2: lionSedge2,
   },
   {
-    id:22,
+    id: 22,
     name: "Rial",
     class: "Exclusive coins",
     info: "Iranian silver coin with the image of a lion. Face value 5000 five thousand dinars (5 five taps). 1928 year. It depicts a bust of Reza Shah, whose head is turned to the right. On the other side is a lion with a saber in front of the radiant sun. Above it is a crown. Before the monetary reform of 1932, the currency of Iran was fog. (1 fog = 10 clicks, 1 crane = 1000 dinars.) Currently, the name 'fog' is used to denote the amount of 10 reais.",
@@ -318,6 +428,8 @@ const data = [
     year: "1928",
     weight: "6.12 g",
     price: "98$",
+    image1: rial1,
+    image2: rial2,
   },
   {
     id: 23,
@@ -333,6 +445,8 @@ const data = [
     year: "2007",
     weight: "5.42 g",
     price: "78$",
+    image1: isk1,
+    image2: isk2,
   },
   {
     id: 24,
@@ -348,14 +462,15 @@ const data = [
     year: "1964",
     weight: "5.47 g",
     price: "69$",
+    image1: yemen1,
+    image2: yemen2,
   },
   {
     id: 25,
     name: "Woman",
     class: "Exclusive coins",
     info: "1 yuan Chinese coin with a picture of a woman. 1986 edition. On one side of the coin is a woman sitting on a stone. Doves fly around her On the other side is a Chinese weapon with stars. Today, the term ' yuan' usually refers to the main unit of account of the renminbi (renminbi), the currency of the People’s Republic of China. Yuan banknotes start at one yuan and go up to 100 yuan. The yuan symbol is also used in Chinese to denote the monetary units of Japan (yen) and Korea (won) and is used to convert the currency to the dollar, as well as to some other currencies; for example, the US dollar is called in Chinese meiyuan.",
-    shortInfo:
-      "1 yuan Chinese coin with a picture of a woman. 1986 edition.",
+    shortInfo: "1 yuan Chinese coin with a picture of a woman. 1986 edition.",
     issuingCountry: "China",
     composition: "nickel",
     quality: "BU",
@@ -363,6 +478,8 @@ const data = [
     year: "1986",
     weight: "6.02 g",
     price: "48$",
+    image1: woman1,
+    image2: woman2,
   },
   {
     id: 26,
@@ -378,6 +495,8 @@ const data = [
     year: "1998",
     weight: "7.24 g",
     price: "78$",
+    image1: alligator1,
+    image2: alligator2,
   },
   {
     id: 27,
@@ -393,6 +512,8 @@ const data = [
     year: "1993",
     weight: "7.24 g",
     price: "82$",
+    image1: panda1,
+    image2: panda2,
   },
   {
     id: 28,
@@ -408,6 +529,8 @@ const data = [
     year: "1974",
     weight: "5.24 g",
     price: "78$",
+    image1: costaRica1,
+    image2: costaRica2,
   },
   {
     id: 29,
@@ -423,14 +546,15 @@ const data = [
     year: "1979",
     weight: "5.24 g",
     price: "72$",
+    image1: yotc1,
+    image2: yotc2,
   },
   {
     id: 30,
     name: "Sailboat",
     class: "Exclusive coins",
     info: "Portuguese silver coin with the image of a sailing ship. Portuguese silver coin in 5 five escudos. It has been produced since 1933. On one side of the coin is a sailing ship floating in the sea. On the other side of the coin is a shield with smaller shields in front of a stylized globe.",
-    shortInfo:
-      "Portuguese silver coin with the image of a sailing ship.",
+    shortInfo: "Portuguese silver coin with the image of a sailing ship.",
     issuingCountry: "Portugal",
     composition: "silver",
     quality: "BU",
@@ -438,6 +562,8 @@ const data = [
     year: "1933",
     weight: "4.4 g",
     price: "134$",
+    image1: sailboat1,
+    image2: sailboat2,
   },
 ];
 
