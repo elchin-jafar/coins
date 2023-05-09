@@ -4,7 +4,9 @@ import BullionCoin from "../assets/BullionCoin.png";
 import ExclusiveCoin from "../assets/ExclusiveCoin.png";
 import CommemorativeCoin from "../assets/CommemorativeCoin.png";
 import { useState } from "react";
-import { Link, useAsyncError } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { CoinShowCase as CoinFromList } from "./ListofCoins";
+import data from "../data/coinData";
 
 const CoinShowCase = (props) => {
   const { title, image, filter } = props;
@@ -34,9 +36,16 @@ const CoinShowCase = (props) => {
 const Homepage = () => {
   const [searchOpen, setSearchOpen] = useState(true);
   const [isSearchEntered, setIsSearchEntered] = useState("");
-  const handleSearchQuery = (query) => setIsSearchEntered(query);
+  const [filteredData, setFilteredData] = useState([]);
+  const handleSearchQuery = (query) => {
+    setIsSearchEntered(query);
+    const filtered = data.filter((coin) =>
+      coin.name.trim().toLowerCase().includes(query.trim().toLowerCase())
+    );
+    setFilteredData(filtered);
+  };
 
-  console.log("isSearchEntered", isSearchEntered);
+  console.log("filteredData", filteredData);
   return (
     <section className={classes.container}>
       <div className={classes.h1}>Homepage</div>
@@ -64,7 +73,30 @@ const Homepage = () => {
         </div>
       )}
       {isSearchEntered && (
-        <div style={{ border: "1px solid red" }}>{isSearchEntered}</div>
+        <div>
+          {filteredData.length !== 0 ? (
+            filteredData.map((coin) => (
+              <CoinFromList
+                title={coin.name}
+                image={coin.image1}
+                info={coin.shortInfo}
+                id={coin.id}
+              />
+            ))
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                fontSize: "2rem",
+                opacity: "0.6",
+                fontStyle: "italic",
+              }}
+            >
+              no coins found
+            </div>
+          )}
+        </div>
       )}
     </section>
   );
