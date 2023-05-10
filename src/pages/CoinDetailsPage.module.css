@@ -1,38 +1,63 @@
 .section {
-    display: flex;
-    justify-content: center;
-    padding: 4.9rem 0;
+  display: flex;
+  justify-content: center;
+  padding: 4.9rem 0;
 }
 
 .left {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .right {
-    display: flex;
-    flex-direction: column;
-    width: 45.2rem;
-    margin-left: 3rem;
-    padding: 1.9rem 4.3rem;
-    background-color: rgba(196, 196, 196, 0.5);
+  display: flex;
+  flex-direction: column;
+  width: 45.2rem;
+  margin-left: 3rem;
+  padding: 1.9rem 4.3rem;
+  background-color: rgba(196, 196, 196, 0.5);
 }
 
 .h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 3.2rem;
-    margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  margin: 0;
 }
 
 .p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.image {
+  width: 300px;
 }
 
 .navigation {
-    max-width: fit-content;
-    text-decoration: underline;
-    cursor: pointer;
+  max-width: fit-content;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 420px) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image {
+    width: 150px;
+  }
+
+  .right {
+    max-width: 60vw;
+    margin-top: 4rem;
+    margin-left: 0;
+  }
+
+  .navigation {
+    margin-bottom: 2rem;
+  }
 }

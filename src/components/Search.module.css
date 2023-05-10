@@ -89,3 +89,23 @@ button:hover {
   opacity: 0.6;
   font-style: italic;
 }
+
+@media only screen and (max-width: 420px) {
+  .flex {
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+
+  .input {
+    max-width: 60vw;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    margin-left: 0;
+  }
+
+  .priceLabel {
+    display: block;
+  }
+}
