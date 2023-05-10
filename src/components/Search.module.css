@@ -24,6 +24,11 @@
   width: 37.4rem;
 }
 
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .priceInput {
   width: 15.5rem;
   margin-right: 1rem;

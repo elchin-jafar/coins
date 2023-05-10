@@ -71,7 +71,8 @@ const Search = ({ isOpen, searchQuery }) => {
         <input
           type="text"
           id="searchInput"
-          className={classes.input}
+          disabled={searchOpen}
+          className={`${classes.input} ${searchOpen && classes.disabled}`}
           onChange={handleSearchQuery}
         />
         <button className={classes.button} onClick={handleSearch}>
@@ -98,8 +99,8 @@ const Search = ({ isOpen, searchQuery }) => {
           <div className="left">
             <Select
               label="Issuing country"
+              defaultValue="empty"
               options={[
-                "enter country",
                 "Canada",
                 "UNITED STATES OF AMERICA",
                 "the Republic of Vietnam",
@@ -126,12 +127,14 @@ const Search = ({ isOpen, searchQuery }) => {
             />
             <Select
               label="Metal"
-              options={["enter metal", "nickel", "gold", "steel"]}
+              defaultValue="empty"
+              options={["nickel", "gold", "steel"]}
               onChange={handleMetalValue}
             />
             <Select
               label="Quality of the coin"
-              options={["enter quality", "BU"]}
+              defaultValue="empty"
+              options={["BU"]}
             />
           </div>
           <div className={classes.right}>
