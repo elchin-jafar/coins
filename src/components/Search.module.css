@@ -108,4 +108,9 @@ button:hover {
   .priceLabel {
     display: block;
   }
+
+  .p {
+    position: relative;
+    top: -40px;
+  }
 }
