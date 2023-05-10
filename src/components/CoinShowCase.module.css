@@ -1,3 +1,7 @@
+.section {
+  display: inline-block;
+}
+
 .container {
   display: flex;
   margin-bottom: 2.5rem;

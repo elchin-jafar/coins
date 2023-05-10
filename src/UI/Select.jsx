@@ -8,7 +8,7 @@ const Select = (props) => {
         {label}
       </label>
       <select className={classes.select} id="select" onChange={onChange}>
-        <option>{defaultValue}</option>
+        <option value="">{defaultValue}</option>
         {options?.map((option, index) => (
           <option key={index} value={option}>
             {option}

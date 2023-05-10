@@ -128,14 +128,10 @@ const Search = ({ isOpen, searchQuery }) => {
             <Select
               label="Metal"
               defaultValue="empty"
-              options={["nickel", "gold", "steel"]}
+              options={["nickel", "gold", "steel", "silver"]}
               onChange={handleMetalValue}
             />
-            <Select
-              label="Quality of the coin"
-              defaultValue="empty"
-              options={["BU"]}
-            />
+            <Select label="Quality of the coin" defaultValue="BU" />
           </div>
           <div className={classes.right}>
             <label htmlFor="" className={classes.label}>
