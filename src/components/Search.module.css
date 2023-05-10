@@ -82,3 +82,10 @@ button:hover {
   padding-top: 2rem;
   padding-left: 3rem;
 }
+
+.notFound {
+  display: flex;
+  font-size: 2rem;
+  opacity: 0.6;
+  font-style: italic;
+}

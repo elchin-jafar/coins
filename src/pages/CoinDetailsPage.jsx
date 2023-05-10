@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import classes from "./CoinDetailsPage.module.css";
-import BullionCoinImg from "../assets/BullionCoin.png";
-import ExclusiveCoinImg from "../assets/ExclusiveCoin.png";
 import { useNavigate, useParams } from "react-router-dom";
-import CustomizedTables from "../UI/Table";
-import data from "../data/coinData";
 import useTable from "../hooks/useTable";
+import classes from "./CoinDetailsPage.module.css";
+import data from "../data/coinData";
+import CustomizedTables from "../UI/Table";
 
 const CoinDetailsPage = () => {
   const [curCoin, setCurCoin] = useState();
@@ -13,12 +11,10 @@ const CoinDetailsPage = () => {
   const { id } = useParams();
   const [currentData] = data.filter((coin) => +id === coin.id);
   const rows = useTable(currentData);
-  console.log("rows", rows);
   useEffect(() => {
     setCurCoin(currentData);
   }, []);
 
-  console.log("state", curCoin);
   return (
     curCoin && (
       <section className={classes.section}>

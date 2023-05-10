@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  margin-bottom: 2.5rem;
+  margin-right: 15rem;
+}
+
+.img {
+  margin-right: 3rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  color: #833ae0;
+  text-decoration: none;
+}
+
+.info {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 22.4rem;
+  margin-top: 0.5rem;
+  color: #000;
+}

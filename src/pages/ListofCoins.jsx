@@ -1,50 +1,10 @@
+import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import data from "../data/coinData";
 import classes from "./ListofCoins.module.css";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import { Link, useParams } from "react-router-dom";
 import Search from "../components/Search";
-import data from "../data/coinData";
-import { useState, useEffect } from "react";
-
-export const CoinShowCase = ({ title, image, info, id }) => {
-  return (
-    <div
-      style={{ display: "flex", marginBottom: "2.5rem", marginRight: "15rem" }}
-    >
-      <img
-        src={image}
-        alt={title}
-        width={120}
-        style={{ marginRight: "3rem" }}
-      />
-      <div className="right">
-        <Link
-          to={`/coin-details/${id}`}
-          className="title"
-          style={{
-            fontSize: "1.6rem",
-            fontWeight: 700,
-            lineHeight: "1.8rem",
-            color: "#833AE0",
-            textDecoration: "none",
-          }}
-        >
-          {title}
-        </Link>
-        <div
-          className="info"
-          style={{
-            fontSize: "1.2rem",
-            fontWeight: 400,
-            width: "22.4rem",
-            marginTop: "0.5rem",
-          }}
-        >
-          {info}
-        </div>
-      </div>
-    </div>
-  );
-};
+import CoinShowCase from "../components/CoinShowCase";
 
 const ListofCoins = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -85,9 +45,7 @@ const ListofCoins = () => {
         >
           Homepage
         </Link>
-        <p style={{ color: "#B1ABAB", fontSize: "1rem", fontWeight: 500 }}>
-          List of the Coins
-        </p>
+        <p className={classes.p}>List of the Coins</p>
       </Breadcrumbs>
       <Search
         isOpen={(prop) => setIsOpen(prop)}
@@ -119,17 +77,7 @@ const ListofCoins = () => {
               />
             ))
           ) : (
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                fontSize: "2rem",
-                opacity: "0.6",
-                fontStyle: "italic",
-              }}
-            >
-              no coins found
-            </div>
+            <div className={classes.notFound}>not found</div>
           )}
         </div>
       )}

@@ -4,7 +4,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import Select from "../UI/Select";
 import data from "../data/coinData";
-import { CoinShowCase } from "../pages/ListofCoins";
+import CoinShowCase from "./CoinShowCase";
 
 const Search = ({ isOpen, searchQuery }) => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -192,16 +192,7 @@ const Search = ({ isOpen, searchQuery }) => {
               />
             ))
           ) : (
-            <div
-              style={{
-                display: "flex",
-                fontSize: "2rem",
-                opacity: "0.6",
-                fontStyle: "italic",
-              }}
-            >
-              not found
-            </div>
+            <div className={classes.notFound}>not found</div>
           )}
         </div>
       )}
